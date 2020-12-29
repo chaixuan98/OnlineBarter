@@ -27,3 +27,13 @@ profileStyle.css ->profile.html
 user.css ->cart.html,favourite.html,add.html
 inbox.css ->message.html
 popup.css ->exchange.html
+
+# login
+
+# register
+
+# reset password
+
+# profile
+
+# settings
