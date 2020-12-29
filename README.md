@@ -34,6 +34,10 @@ popup.css ->exchange.html
 ![Screenshot (75)](https://user-images.githubusercontent.com/76723340/103288367-afdefc00-4a1f-11eb-99b7-e7ce3bab9c16.png)
 # reset password
 ![Screenshot (76)](https://user-images.githubusercontent.com/76723340/103288378-b66d7380-4a1f-11eb-9e86-5bcd31ae7f69.png)
+![Screenshot (79)](https://user-images.githubusercontent.com/76723340/103288882-dea9a200-4a20-11eb-9f57-6539b251980f.png)
+![Screenshot (80)](https://user-images.githubusercontent.com/76723340/103288883-df423880-4a20-11eb-8977-1d645e97ec60.png)
+![Screenshot (81)](https://user-images.githubusercontent.com/76723340/103288876-db161b00-4a20-11eb-8068-c9aae375ded8.png)
+![Screenshot (82)](https://user-images.githubusercontent.com/76723340/103288880-dd787500-4a20-11eb-866b-9dfb7766f776.png)
 # profile
 ![Screenshot (77)](https://user-images.githubusercontent.com/76723340/103288394-bf5e4500-4a1f-11eb-9340-bf28f5376ce0.png)
 # settings
