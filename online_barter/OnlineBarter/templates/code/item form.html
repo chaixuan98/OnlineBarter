@@ -1,0 +1,41 @@
+{% extends "code/item form base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    {% csrf_token %}
+    <div id="contentID" class="content">
+        <div class="small-container">
+            {{form|crispy}}
+        </div>
+    </div>
+
+{% endblock content %}
+<!--
+<div id="contentID" class="content">
+    <div class="small-container">   
+        <h2>Add Barter Item</h2>
+        <div class="text-form">
+            <div class="input_field">
+                {{form.itemName}}
+            </div>
+            <div class="input_field">
+                {{form.itemName.itemCondition}}
+            </div>
+            <div class="input_field">
+                {{form.itemDescription}}
+            </div>
+            <div class="input_field image">
+                <label for="">Image</label>
+                <form action="upload.php" method="POST">
+                    {{form.itemFileName}}
+                    <p>Drag your files here or click in this area.</p>
+                    <input type="file" multiple>
+                </form>
+            </div>
+            <div class="input_field">
+                <input type="submit" value="List" class="btn">
+            </div>
+        </div>
+    </div> 
+</div>  
+-->

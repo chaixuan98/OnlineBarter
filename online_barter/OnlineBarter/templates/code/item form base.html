@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Delete Barter Item</title>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+        <link rel="stylesheet" href="{% static 'user.css' %}">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <!--header area start-->
+        <header>
+            <div class="logo" href="{% url 'index' %}"><img src="{% static 'image/logo.png' %}" alt="logo" ></div>
+          </header>
+        <!--header area end-->
+
+        <!--mobile navigation bar start-->
+        <div class="mobile_nav">
+            <div class="nav_bar">
+                <i class="fa fa-bars nav_btn"></i>
+            </div>
+            <div class="mobile_nav_items">
+                <li><a href="{% url 'profile' %}"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                <li><a href="{% url 'favourite' %}"><i class="fa fa-heart" aria-hidden="true"></i> Favourite</a></li>
+                <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
+                <li><a href="{% url 'message' %}"><i class="fa fa-envelope" aria-hidden="true"></i> Message</a></li>
+                <li><a href="{% url 'index' %}"><i class="fa fa-home" aria-hidden="true"></i> Back to Home</a></li>
+                <li><a href=""><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
+                <li><a href=""><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</a></li>
+            </div>
+        </div>
+        <!--mobile navigation bar end-->
+
+        <!--sidebar start-->
+        <div id="sidebarID" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()"> 
+            <li><a href="{% url 'profile' %}"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+            <li><a href="{% url 'favourite' %}"><i class="fa fa-heart" aria-hidden="true"></i> Favourite</a></li>
+            <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
+            <li><a href="{% url 'message' %}"><i class="fa fa-envelope" aria-hidden="true"></i> Message</a></li>
+            <li><a href="{% url 'index' %}"><i class="fa fa-home" aria-hidden="true"></i> Back to Home</a></li>
+            <li><a href=""><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
+            <li><a href=""><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</a></li>
+        </div>
+        <!--sidebar end-->
+
+
+        <div id="contentID" class="content">
+            <div class="small-container">   
+                <div class="jumbotron">
+                    <h2>Add Traded Item</h2>
+                    <p>Fill in item information to barter</p>
+                    <hr class="my-4">
+                    {% block content %}
+                    {% endblock content %}
+                </div>
+            </div> 
+        </div>   
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.nav_btn').click(function(){
+        $('.mobile_nav_items').toggleClass('active');
+      });
+    });
+
+    var mini = true;
+    function toggleSidebar() {
+        if (mini) {
+            /*opening sidebar*/
+            document.getElementById("sidebarID").style.width = "180px";
+            document.getElementById("contentID").style.marginLeft = "180px";
+            this.mini = false;
+        }else {
+            /*closing sidebar*/
+            document.getElementById("sidebarID").style.width = "48px";
+            document.getElementById("contentID").style.marginLeft = "48px";
+            this.mini = true;
+        }
+    }
+
+    $(document).ready(function(){
+        $('form input').change(function () {
+            $('form p').text(this.files.length + " file(s) selected");
+        });
+    });
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    </body>
+    </html>
